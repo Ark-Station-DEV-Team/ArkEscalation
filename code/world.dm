@@ -661,8 +661,8 @@ var/world_topic_spam_protect_time = world.timeofday
 		features += "~[n] player"
 
 
-	if (features)
-		s += ": [jointext(features, ", ")]"
+	// if (features)
+	// 	s += ": [jointext(features, ", ")]"
 
 	/* does this help? I do not know */
 	if (src.status != s)
