@@ -2608,5 +2608,7 @@
 #include "maps\~mapsystem\maps_areas.dm"
 #include "maps\~mapsystem\maps_jobs.dm"
 #include "maps\~mapsystem\maps_unit_testing.dm"
+#include "tgs\includes.dm"
 #include "~code\global_init.dm"
+#include "~code\tgs.dm"
 // END_INCLUDE
