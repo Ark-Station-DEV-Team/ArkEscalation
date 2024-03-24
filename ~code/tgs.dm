@@ -19,34 +19,29 @@
 // Required interfaces (fill in with your codebase equivalent):
 
 /// Create a global variable named `Name` and set it to `Value`.
-#define TGS_DEFINE_AND_SET_GLOBAL(Name, Value)
+#define TGS_DEFINE_AND_SET_GLOBAL(Name, Value) var/global/##Name = ##Value
 
-/// Read the value in the global variable `Name`.
-#define TGS_READ_GLOBAL(Name)
+#define TGS_READ_GLOBAL(Name) global.##Name
 
-/// Set the value in the global variable `Name` to `Value`.
-#define TGS_WRITE_GLOBAL(Name, Value)
+#define TGS_WRITE_GLOBAL(Name, Value) global.##Name = ##Value
 
 /// Disallow ANYONE from reflecting a given `path`, security measure to prevent in-game use of DD -> TGS capabilities.
 #define TGS_PROTECT_DATUM(Path)
 
 /// Display an announcement `message` from the server to all players.
-#define TGS_WORLD_ANNOUNCE(message)
+#define TGS_WORLD_ANNOUNCE(message) world << ##message
+
+#define TGS_INFO_LOG(message) world.log << "TGS Info: [##message]"
+
+#define TGS_WARNING_LOG(message) world.log << "TGS Warning: [##message]"
+
+#define TGS_ERROR_LOG(message) world.log << "TGS Error: [##message]"
 
 /// Notify current in-game administrators of a string `event`.
-#define TGS_NOTIFY_ADMINS(event)
-
-/// Write an info `message` to a server log.
-#define TGS_INFO_LOG(message)
-
-/// Write an warning `message` to a server log.
-#define TGS_WARNING_LOG(message)
-
-/// Write an error `message` to a server log.
-#define TGS_ERROR_LOG(message)
+#define TGS_NOTIFY_ADMINS(event) world.log << "TGS Admin Message: [##event]"
 
 /// Get the number of connected /clients.
-#define TGS_CLIENT_COUNT
+#define TGS_CLIENT_COUNT global.client_cout
 
 #endif
 

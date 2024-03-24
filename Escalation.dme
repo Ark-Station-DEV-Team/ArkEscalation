@@ -2611,4 +2611,5 @@
 #include "tgs\includes.dm"
 #include "~code\global_init.dm"
 #include "~code\tgs.dm"
+#include "~code\tgs_integrate.dm"
 // END_INCLUDE
