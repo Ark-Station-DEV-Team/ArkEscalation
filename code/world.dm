@@ -627,7 +627,7 @@ var/world_topic_spam_protect_time = world.timeofday
 		s += "<b>[config.server_name]</b> &#8212; "
 
 	s += " ("
-	s += "<a href=\"[CONFIG_GET(config.banappeals)]\">"
+	s += "<a href=\"[config.banappeals]\">"
 	s += "Discord"
 	s += ")\]"
 	s += "<br>"
