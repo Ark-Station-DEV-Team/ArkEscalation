@@ -626,10 +626,14 @@ var/world_topic_spam_protect_time = world.timeofday
 	if (config && config.server_name)
 		s += "<b>[config.server_name]</b> &#8212; "
 
-	s += "<b>["Discord"](https://spacestation13.space)</b>";
+	s += " ("
+	s += "<a href=\"[CONFIG_GET(config.banappeals)]\">"
+	s += "Discord"
+	s += ")\]"
 	s += "<br>"
 	s += "An unforgiving, realistic mil-sim RP set in an alternate-universe Cold War."
 	s += "<br>"
+
 
 	var/list/features = list()
 
